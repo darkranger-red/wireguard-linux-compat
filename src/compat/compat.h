@@ -22,6 +22,9 @@
 #if RHEL_MINOR >= 9 && RHEL_KERNEL_RELEASE >= 483
 #define IS_NEWER_RHEL8_483
 #endif
+#if RHEL_MINOR >= 9 && RHEL_KERNEL_RELEASE >= 489
+#define IS_NEWER_RHEL8_489
+#endif
 #endif
 #endif
 #ifdef UTS_UBUNTU_RELEASE_ABI
