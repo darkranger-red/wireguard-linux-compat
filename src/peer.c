@@ -54,7 +54,7 @@ struct wg_peer *wg_peer_create(struct wg_device *wg,
 	skb_queue_head_init(&peer->staged_packet_queue);
 	wg_noise_reset_last_sent_handshake(&peer->last_sent_handshake);
 	set_bit(NAPI_STATE_NO_BUSY_POLL, &peer->napi.state);
-#if defined(IS_NEWER_RHEL8_483)
+#if defined(IS_NEWER_RHEL8_477)
        netif_napi_add(wg->dev, &peer->napi, wg_packet_rx_poll);
 #else
         netif_napi_add(wg->dev, &peer->napi, wg_packet_rx_poll,
